@@ -57,6 +57,15 @@ public class NineBoxPuzzle extends JPanel {
         add(scoresButton, gridBagLayout);
         
         JButton exitButton = new JButton(" Exit ");
+        exitButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.setVisible(false);
+                frame.dispose();    
+            }
+            
+        });
         gridBagLayout.gridy = 2;
         add(exitButton, gridBagLayout);
     }
